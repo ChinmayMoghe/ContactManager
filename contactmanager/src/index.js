@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './style.css';
+import AddContact from './components/AddContact';
 
-const App = ()=> {
+const App = () => {
     return (
-        <div>Starting an app from scratch !!!</div>
+        <div className={"container"}>
+            <h1>Contact Manager</h1>
+            <AddContact></AddContact>
+        </div>
     );
 };
 
-ReactDOM.render(<App/>,document.querySelector("#root"));
+ReactDOM.render(<App />, document.querySelector("#root"));
