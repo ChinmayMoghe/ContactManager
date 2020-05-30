@@ -1,7 +1,14 @@
+/*Basic CSS reset*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .container {
     width: 80vw;
     height: 100%;
-    margin:0 auto;
+    margin:1em auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
