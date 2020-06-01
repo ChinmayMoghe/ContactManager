@@ -1,17 +1,23 @@
 import React from 'react';
 import './ContactList.css';
+import { connect } from 'react-redux';
 
 const showContactList = (contactList) => {
     return contactList.map((contact,index)=><li className="contact" key={index}>{contact}</li>);
 }
 
-const ContactList = ({contactList}) => {
+const ContactList = (props) => {
     return (
         <div className="contact-list-container">
             <ul className="contact-list">
-                {showContactList(contactList)}
+                {showContactList(props.contactList)}
             </ul>
         </div>
     );
 }
-export default ContactList;
+
+const mapStateToProps = (state) => {
+    return state;
+}
+
+export default connect(mapStateToProps)(ContactList);
